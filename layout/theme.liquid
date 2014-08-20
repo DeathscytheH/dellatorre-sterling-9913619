@@ -69,9 +69,10 @@
           <li id="checkout-link" class="fr"><a href="/cart" class="btn" title="Checkout">Checkout</a></li>
           {% endif %}
           <li class="fr"><a href="/cart" class="cart" title="Shopping Cart"><i class="fa fa-shopping-cart"></i> Cart: {{ cart.item_count }}</a></li>
-          <li class="fr"><i class="fa fa"></i>972-459-0201</li>
-          <li class="fr">VISTA RIDGE MALL #2304 LEWISVILLE, TEXAS</li>
-          <li class="fr">ON LINE BOUTIQUE</li>
+          <!--
+          <li class="fr">972-459-0201  -</li>
+          <li class="fr">-  VISTA RIDGE MALL #2304 LEWISVILLE, TEXAS</li>
+          <li class="fr">ON LINE BOUTIQUE</li>-->
           {% include 'customer-links' %}
           {% if settings.top_bar_linklist != blank %}
           {% for link in linklists[settings.top_bar_linklist].links %}
