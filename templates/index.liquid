@@ -52,6 +52,55 @@
 </div>
 <!-- End intro -->
 {% endif %}
+
+<!-- Inicia carousel slick -->
+    <div class="dellatorre1 span12 row">
+        <div>{{ '1.png' | asset_url | img_tag }}</div>
+        <div>{{ '2.png' | asset_url | img_tag }}</div>
+        <div>{{ '3.png' | asset_url | img_tag }}</div>
+        <div>{{ '4.png' | asset_url | img_tag }}</div>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+        $('.dellatorre1').slick({
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,           
+              responsive: [
+        {
+          breakpoint: 720,
+          settings: {
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,            
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            infinite: true,
+            speed: 300,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            infinite: true,
+            speed: 300,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          }
+        }
+      ]
+            });
+        });
+    </script>
+<!-- Termina carousel slick -->
       
 <div class="products">
   {% for product in collections[settings.frontpage_collection].products %}
