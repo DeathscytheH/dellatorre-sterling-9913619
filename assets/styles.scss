@@ -131,7 +131,7 @@ em { font-style: italic; }
 .icon-cart { float: left; display: block; width: 20px; height: 16px; margin: 21px 10px 0 0; opacity: 0.6; filter: alpha(opacity = 60); }
 
 
-.icon-cart { background: url('//cdn.shopify.com/s/files/1/0605/4057/t/2/assets/icon-cart-small.png?709') no-repeat; background-position: 0 -16px; }
+.icon-cart { background: url('//cdn.shopify.com/s/files/1/0605/4057/t/2/assets/icon-cart-small.png?755') no-repeat; background-position: 0 -16px; }
 
 
 #social .google-plus, #product .tweet-btn, #product .pinterest, #product .facebook-like { display:block; float:left; margin-right:10px; }
@@ -277,9 +277,11 @@ ul.expanded > li, ol.expanded > li { margin-bottom: 10px; }
 
 /* 3.3 - Navigation */
 
+nav { font-family:Asap; }
+
 nav { position: relative; border-bottom: 1px solid #777777; border-top: 1px solid #777777; }
 nav > ul > li { margin-bottom: 0; }
-nav > ul > li > a { text-decoration: none; color: #0f5f8c; display: block; padding: 0 15px; font-size: 14px; line-height: 48px; height: 48px; font-weight: 400; text-transform: none; }
+nav > ul > li > a { text-decoration: none; color: #0f5f8c; display: block; padding: 0 15px; font-size: 20px; line-height: 48px; height: 48px; font-weight: 400; text-transform: uppercase; }
 nav > ul > li > a.current { color: #0f5f8c; }
 nav > ul > li:hover > a { color: #333333; text-decoration: none; }
 nav > ul > li.dropdown { position:relative; }
@@ -735,7 +737,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endCol
 .flex-caption {width: 96%; padding: 2%; margin: 0; position: absolute; left: 0; bottom: 0; background: rgba(0,0,0,.8); color: #fff; text-shadow: 0 -1px 0 rgba(0,0,0,.8); font-size: 14px; line-height: 18px;}
 .flex-direction-nav { height: 0; display: none; }
 .flex-direction-nav li { margin-bottom: 0; }
-.flex-direction-nav li a {width: 50px; height: 50px; display: block; background: url('//cdn.shopify.com/s/files/1/0605/4057/t/2/assets/slider-arrows.png?709') no-repeat; position: absolute; top: 48%; cursor: pointer; text-indent: -999em;}
+.flex-direction-nav li a {width: 50px; height: 50px; display: block; background: url('//cdn.shopify.com/s/files/1/0605/4057/t/2/assets/slider-arrows.png?755') no-repeat; position: absolute; top: 48%; cursor: pointer; text-indent: -999em;}
 .flex-direction-nav li .disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
 
 /* Dark Direction Nav */
@@ -756,6 +758,5 @@ input[type="radio"] {-webkit-appearance: radio;}
 
 /* Agregador por Deathscythe */
 .dellatorre1{
-    margin: auto;
+    margin-right: 50px;
 }
-
