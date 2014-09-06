@@ -99,7 +99,7 @@
       {% if settings.navigation_alignment == "right" %}
       <div class="row" id="header">
         <div class="span12">
-          <div class="inner-left logo-wrapper">
+          <div class="span4 inner-left logo-wrapper">
             <div class="logo">
               {% if settings.use_logo %}
               <a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
@@ -111,8 +111,8 @@
               {% endif %}
             </div>
           </div>
-          <section id="nav" class="row row-full">
-          <div class="span8">
+          <section id="nav" class="row">
+          <div class="span7 inner-right" style="padding-top:25px">
               <nav class="main">
                 {% include 'site-nav' %}
               </nav> 
