@@ -1,3 +1,5 @@
+.row-full{margin: 0px; width: 100%; padding: 0px;}
+
 /*
 /*    SECTION 1 
 /*    1.1 - Base Styles
@@ -239,9 +241,9 @@ hr.divider { margin: 15px 0; background: {{ settings.border_color }}; height: 1p
 .inner-left { margin-left: 0px !important; }
 .inner-right { margin-right: 0px !important; }
 
-.wrapper { width: 996px; margin: 0 auto; padding: 0 15px;}
-.toolbar { width: 996px; margin: 0 auto; }
-footer { width: 996px; margin: 0 auto; }
+.wrapper { width: 100%; margin: 0 auto; padding: 0 0px;}
+.toolbar { width: 100%; margin: 0 auto; }
+.footer { width: 100%; margin: 0 auto; }
 
 .span1 { width: 53px; }
 .span2 { width: 136px; }
@@ -537,7 +539,7 @@ div.errors { margin-bottom: 15px; }
 {% if settings.wide_layout %}
 @media only screen and (min-width: 1340px) {
 
-.wrapper, .toolbar, footer { width: 1308px;}
+.wrapper, .toolbar, footer { width: 100%;}
  
 .span1  {width: 79px;}
 .span2  {width: 188px;}
@@ -567,7 +569,7 @@ div.errors { margin-bottom: 15px; }
   .logo { max-width: 738px; }
   {% endif %}
   {% endif %}
-  .wrapper, .toolbar, footer { width:768px; }
+  .wrapper, .toolbar, footer { width:100%; }
   .span1 { width:34px; }
   .span2 { width:92px; }
   .span3 { width:162px; }
@@ -607,7 +609,7 @@ div.errors { margin-bottom: 15px; }
   .logo { max-width: 570px; }
   {% endif %}
   {% endif %}
-  .wrapper, .toolbar, footer { width:600px; }
+  .wrapper, .toolbar, footer { width:100%; }
   .span1 { width:20px; }
   .span2 { width:70px; }
   .span3 { width:120px; }
@@ -663,7 +665,7 @@ div.errors { margin-bottom: 15px; }
   .logo a, .logo img { margin: 0 auto; }  
   .logo h1 a { font-size:32px; margin-left:0px; }
   .toolbar .search-field { display: none; }
-  .wrapper, .toolbar, footer { width:480px; }
+  .wrapper, .toolbar, footer { width:100%; }
   .span1 { width:10px; }
   .span2 { width:50px; }
   .span3 { width:90px; }
@@ -721,7 +723,7 @@ div.errors { margin-bottom: 15px; }
   nav.mobile { padding: 0; }
   {% endif %}
   .wrapper { padding: 0; }
-  .wrapper, .toolbar, footer { width:320px; }
+  .wrapper, .toolbar, footer { width:100%; }
   .span1,.span2,.span3,.span4,.span5,.span6,.span7,.span8,.span9,.span10,.span11,.span12, .span4.logo-wrapper { width:290px; float:none; } 
   {% if settings.navigation_alignment == "below" %}
   {% if settings.logo_center %}
