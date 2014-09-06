@@ -98,8 +98,8 @@
       <!-- Begin right navigation -->
       {% if settings.navigation_alignment == "right" %}
       <div class="row" id="header">
-        <div class="span12 border-bottom">
-          <div class="span4 inner-left logo-wrapper">
+        <div class="span12">
+          <div class="inner-left logo-wrapper">
             <div class="logo">
               {% if settings.use_logo %}
               <a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
@@ -109,16 +109,23 @@
               {% else %}              
               <h1><a href="/">{{ shop.name }}</a></h1>
               {% endif %}
-            </div> 
-          </div> 
-          
+            </div>
+          </div>
           <section id="nav" class="row">
+          <div class="span8">
+              <nav class="main">
+                {% include 'site-nav' %}
+              </nav> 
+          </div>
+          </section> 
+          <!-- End right navigation 
+          <section id="nav">
             <div class="span8">
               <nav class="main">
                 {% include 'site-nav' %}
               </nav> 
             </div> 
-          </section> 
+          </section> -->
         </div> 
       </div> 
       {% endif %}
@@ -126,7 +133,7 @@
       
       <!-- Begin below navigation -->
       {% if settings.navigation_alignment == "below" %}
-      <div class="span12 clearfix">
+      <div class="span4 clearfix">
         <div class="logo">
           {% if settings.use_logo %}
           <a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
@@ -140,7 +147,7 @@
       </div> 
       
       <section id="nav" class="row">
-        <div class="span12">
+        <div class="span8">
           <nav class="main">
             {% include 'site-nav' %}
           </nav> <!-- /.main -->

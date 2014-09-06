@@ -1,6 +1,6 @@
 {% capture collection_handle %}{{ product-loop | handleize }}{% endcapture %}
 {% capture url %}{% if collection_handle != "" %}/collections/{{ product-loop }}{{ product.url }}{% else %}{{ product.url }}{% endif %}{% endcapture %}
-<div class="product span4 {% if template == 'collection' %}adaptive-grid{% endif %}">
+<div class="product span3 {% if template == 'collection' %}adaptive-grid{% endif %}">
   
   {% if product.price_min < product.compare_at_price_min %}
     {% if settings.show_sale_circle %}
@@ -9,9 +9,9 @@
   {% endif %}
 
     <div class="view view-first">
-      <a href="{{ url }}">
+      <a href="{{ url }}" class="clearfix">
         <img src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.title | escape  }}" />
-      </a>
+      
       <div class="mask">
         <h3>{{ product.title }}</h3>
         <p>
@@ -32,8 +32,8 @@
             {% endif %}
           </span>
         </p>
-        <a href="{{ url }}" class="clearfix info">Read More</a>
       </div>
+      </a>
     </div>
 <!-- detalles
   <div class="details">

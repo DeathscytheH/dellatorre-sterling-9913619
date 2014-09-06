@@ -757,6 +757,18 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endCol
 input[type="radio"] {-webkit-appearance: radio;}
 
 /* Agregador por Deathscythe */
-.dellatorre1{
+.dellatorre12{
     margin-right: 50px;
+}
+
+#fotos{
+    margin: auto; 
+    padding: 0; 
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+#fot{
+    display: inline; 
+    padding-right: 1px
 }
