@@ -1,5 +1,5 @@
 .row-full{margin: 0px; width: 100%; padding: 0px;}
-
+.navegador{}
 /*
 /*    SECTION 1 
 /*    1.1 - Base Styles
@@ -133,7 +133,7 @@ em { font-style: italic; }
 .icon-cart { float: left; display: block; width: 20px; height: 16px; margin: 21px 10px 0 0; opacity: 0.6; filter: alpha(opacity = 60); }
 
 
-.icon-cart { background: url('//cdn.shopify.com/s/files/1/0605/4057/t/2/assets/icon-cart-small.png?1321') no-repeat; background-position: 0 -16px; }
+.icon-cart { background: url('//cdn.shopify.com/s/files/1/0605/4057/t/2/assets/icon-cart-small.png?1607') no-repeat; background-position: 0 -16px; }
 
 
 #social .google-plus, #product .tweet-btn, #product .pinterest, #product .facebook-like { display:block; float:left; margin-right:10px; }
@@ -561,6 +561,7 @@ div.errors { margin-bottom: 15px; }
   
   .logo { max-width:430px; }
   
+  #nav{padding-bottom: 30px;}
   .wrapper, .toolbar, footer { width:100%; }
   .span1 { width:20px; }
   .span2 { width:70px; }
@@ -607,6 +608,9 @@ div.errors { margin-bottom: 15px; }
   
   .logo { max-width:320px; }
   
+
+   #nav{padding-bottom: 30px;}
+
   .logo { margin: 0 auto; float: none; text-align: center; }
   .logo a, .logo img { margin: 0 auto; }  
   .logo h1 a { font-size:32px; margin-left:0px; }
@@ -702,6 +706,8 @@ div.errors { margin-bottom: 15px; }
   .span3.adaptive-grid {width: 290px;}  
   #collection .browse-tags select {margin-top: 12px;}
   #collection .browse-tags {padding-left: 0px;}
+
+  .nav{margin-bottom: 30px;}
 }
 
 /* =================== */
@@ -739,7 +745,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endCol
 .flex-caption {width: 96%; padding: 2%; margin: 0; position: absolute; left: 0; bottom: 0; background: rgba(0,0,0,.8); color: #fff; text-shadow: 0 -1px 0 rgba(0,0,0,.8); font-size: 14px; line-height: 18px;}
 .flex-direction-nav { height: 0; display: none; }
 .flex-direction-nav li { margin-bottom: 0; }
-.flex-direction-nav li a {width: 50px; height: 50px; display: block; background: url('//cdn.shopify.com/s/files/1/0605/4057/t/2/assets/slider-arrows.png?1321') no-repeat; position: absolute; top: 48%; cursor: pointer; text-indent: -999em;}
+.flex-direction-nav li a {width: 50px; height: 50px; display: block; background: url('//cdn.shopify.com/s/files/1/0605/4057/t/2/assets/slider-arrows.png?1607') no-repeat; position: absolute; top: 48%; cursor: pointer; text-indent: -999em;}
 .flex-direction-nav li .disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
 
 /* Dark Direction Nav */

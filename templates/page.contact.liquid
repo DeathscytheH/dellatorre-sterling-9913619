@@ -1,9 +1,65 @@
 <div id="page" class="row">
   
-  <div class="span12">
-    <h1>{{ page.title }}</h1>
-    <div class="page-with-contact-form">
-      {{ page.content }}
+  <style>
+    /* centered columns styles */
+    .row-centered {
+        text-align:center;
+    }
+    .col-centered {
+        display:inline-block;
+        float:none;
+        /* reset the text-align */
+        text-align:left;
+        /* inline-block space fix */
+        margin-right:-4px;
+    }
+    .formItems input{
+      
+      border-radius:25px;
+      width:90%;
+    } 
+    .formItems textarea{
+      width: 90%;
+      border-radius:15px;
+    }
+    .formItems {
+      margin-left:5%;
+    }
+    @media (max-width: 900px) { 
+      #hide { 
+        display:none;
+      } 
+    }
+    
+    /*@media (max-width: 1095px) { 
+      #hide { 
+        
+        display:inline-block;
+        float:none; 					*/
+        /* reset the text-align */
+      /*  text-align:left; */
+        /* inline-block space fix */
+        /*margin-right:-4px;
+        
+      } 
+    }*/
+  
+  </style>
+  
+  <div class="row row-centered" 
+       style="color:#fff;
+              background-image:url(https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/fullbgcontact.png);
+              background-size:cover;">
+  
+  <div class="col-md-6 col-centered" style="
+              background-image:url(https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/bgform.png); width:70%;
+              background-size:cover;">
+    <br>
+    <h1 style="color:#fff;" class="row-centered">{{ page.title }}</h1>
+    <h4 style="color:#fff;" class="row-centered" >{{ page.content }}</h4>
+    <div class="col-md-6 col-centered" id="responsiveleft" 
+         style="margin-top: 5%; width:auto; background-color:#;">
+      
             
         {% form 'contact' %}
         {% if form.posted_successfully? %}
@@ -21,32 +77,53 @@
         </div>
         {% endif %}
 
-        <div id="contactFormWrapper">
+        <div id="contactFormWrapper" class="formItems">
           <p>
-            <label>Your Name:</label><br/>
-            <input type="text" id="contactFormName" name="contact[name]" placeholder="John Doe" />
+            <label>Name:</label><br/>
+            <input type="text" id="contactFormName" name="contact[name]"/>
           </p>
           <p>
             <label>Email:</label><br/>
-            <input type="email" id="contactFormEmail" name="contact[email]" placeholder="john@example.com" />
+            <input type="email" id="contactFormEmail" name="contact[email]" />
           </p>
           <p>
-            <label>Phone Number:</label><br/>
-            <input type="telephone" id="contactFormTelephone" name="contact[phone]" placeholder="555-555-1234" />
+            <label>Phone:</label><br/>
+            <input type="telephone" id="contactFormTelephone" name="contact[phone]" />
           </p> 
+          
+          <p>
+            <label>Birthday:</label><br/>
+            <input id="birthdayFormbirthday" name="birthdayFormbirthday"/>
+          </p>
+          <p>
+            <label>City:</label><br/>
+            <input id="cityFormCity" name="cityFormCity"/>
+          </p>
           <p>
             <label>Message:</label><br/>
-            <textarea rows="15" cols="75" id="contactFormMessage" name="contact[body]" placeholder="Your Message"></textarea>
+            <textarea rows="15" cols="48" id="contactFormMessage" name="contact[body]" ></textarea>
           </p>
           <p>
-            <input type="submit" id="contactFormSubmit" value="Send" class="btn" />
+            <input type="submit" id="contactFormSubmit" 
+                   style="box-shadow: 3px 3px 3px #000;
+                          border-radius:5px;
+                          width:40%; margin-left:25%;"
+                   value="Send" class="btn" />
           </p>
         </div>
         {% endform %}
       
     </div>
+   
+    <div class="col-md-6" style="float:right; margin-top:6%; width:50%;" 
+         id="hide">
+      	<img id="hide" style="width:80%"
+             src="https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/itemcontactocollar.png"/>
+    </div>
+    
   </div>
-  
+    
+    
 </div>
 
-
+</div>
