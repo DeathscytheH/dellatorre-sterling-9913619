@@ -13,7 +13,7 @@
         <img src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.title | escape  }}" />
       
       <div class="mask">
-        <h3>{{ product.title }}</h3>
+        <h5>{{ product.title }}</h5>
         <p>
           {% if settings.product_vendor %}
             <span class="vendor">{{ product.vendor }}</span>

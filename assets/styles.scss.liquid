@@ -314,11 +314,11 @@ nav { font-family:{{ settings.google_nav_font | replace: '+', ' ' }}; }
 {% endif %}
 nav { position: relative; border-bottom: 1px {{ settings.border_style }} {{ settings.border_color }}; border-top: 1px {{ settings.border_style }} {{ settings.border_color }}; }
 nav > ul > li { margin-bottom: 0; }
-nav > ul > li > a { text-decoration: none; color: {{ settings.nav_link_color }}; display: block; padding: 0 15px; font-size: {{ settings.nav_font_size }}; line-height: {{ settings.nav_line_height }}; height: {{ settings.nav_line_height }}; font-weight: {{ settings.nav_weight }}; text-transform: {{ settings.nav_font_style }}; }
+nav > ul > li > a { text-decoration: none; color: {{ settings.nav_link_color }}; display: block; padding: 0 15px; font-size: {{ settings.nav_font_size }}; line-height: {{ settings.nav_line_height }}; height: {{ settings.nav_line_height }}; font-weight: {{ settings.nav_weight }}; text-transform: {{ settings.nav_font_style }}; margin-right: -30px; }
 nav > ul > li > a.current { color: {{ settings.selected_nav_link_color }}; }
 nav > ul > li:hover > a { color: {{ settings.nav_link_hover_color }}; text-decoration: none; }
-nav > ul > li.dropdown { position:relative; }
-nav > ul > li.dropdown > .dropdown { background: {{ settings.nav_dropdown_background_color }}; list-style: none outside none; padding: 5px 15px; display: none; position: absolute; min-width: 180px; z-index: 99999; top: 100%; left: 0%; margin-left: 15px; border: 1px solid {{ settings.border_color }}; }
+nav > ul > li.dropdown { position:relative; margin-right: -30px;}
+nav > ul > li.dropdown > .dropdown { background: {{ settings.nav_dropdown_background_color }}; list-style: none outside none; padding: 5px 15px; display: none; position: absolute; min-width: 180px; z-index: 99999; top: 100%; left: 0%; margin-left: 15px;  border: 1px solid {{ settings.border_color }}; }
 nav > ul > li.dropdown:hover > .dropdown { display: block; z-index: 999999; -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.10); -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.10); box-shadow:0 0 3px rgba(0, 0, 0, 0.10); }
 nav > ul > li.dropdown li { list-style: none; font-size: 13px; line-height: 30px; }
 nav > ul > li.dropdown li a { line-height: 30px; height: 30px; font-size: 13px; color: {{ settings.nav_dropdown_link_color }}; }
@@ -832,6 +832,11 @@ input[type="radio"] {-webkit-appearance: radio;}
     margin-right: 50px;
 }
 
+@media (max-width: 900px) { 
+      .hide  {display:none;} 
+      .space {height: 30px;}
+    }
+.combo{margin-right: auto; margin-left: auto;}
 #fotos{
     margin: auto; 
     padding: 0; 
