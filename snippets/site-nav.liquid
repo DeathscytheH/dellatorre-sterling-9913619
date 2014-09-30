@@ -1,4 +1,4 @@
-<ul class="horizontal-inline clearfix {% if settings.navigation_alignment == "right" %}fr{% endif %}">
+<ul class="horizontal-inline clearfix {% if settings.navigation_alignment == "left" %}fr{% endif %}">
   {% for link in linklists.main-menu.links %}
   {% assign has_sub_menu = false %}
   {% assign has_sub_categories = false %}
@@ -17,7 +17,7 @@
     {% assign has_sub_categories = true %}
   {% endif %}
   <li class="{% if has_sub_menu or has_sub_categories %} dropdown{% endif %}">
-    <a href="{{ link.url }}" {% if link.active or parent_link_active %} class="current"{% endif %}>
+    <a href="{{ link.url }}" {% if link.active or parent_link_active %} class="current"{% endif %} >
       {{ link.title }}
       {% if has_sub_menu or has_sub_categories %} <i class="fa fa-angle-down"></i>{% endif %}
     </a> 

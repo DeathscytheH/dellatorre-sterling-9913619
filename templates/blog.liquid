@@ -1,15 +1,69 @@
 {% paginate blog.articles by settings.pagination_limit %}
 <div id="blog">
+  <style>
+    /* centered columns styles */
+    .row-centered {
+        text-align:center;
+    }
+    .col-centered {
+        display:inline-block;
+        float:none;
+        /* reset the text-align */
+        text-align:left;
+        /* inline-block space fix */
+        margin-right:-4px;
+    }
+    .formItems input{
+      
+      border-radius:25px;
+      width:90%;
+    } 
+    .formItems textarea{
+      width: 90%;
+      border-radius:15px;
+    }
+    .formItems {
+      margin-left:5%;
+    }
+    @media (max-width: 900px) { 
+      #hide { 
+        display:none;
+      } 
+    }
+    
+    /*@media (max-width: 1095px) { 
+      #hide { 
+        
+        display:inline-block;
+        float:none;                     */
+        /* reset the text-align */
+      /*  text-align:left; */
+        /* inline-block space fix */
+        /*margin-right:-4px;
+        
+      } 
+    }*/
   
+  </style>
+  
+  <div class="row row-centered" 
+       style="color:#fff;
+              background-image:url(https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/fullbgcontact.png);
+              background-size:cover;">
+  
+    <div class="col-md-6 col-centered" style="
+              background-image:url(https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/bgform.png); width:70%;
+              background-size:cover;">
+
   <div class="row title">
-    <div class="span12">
+    <div class="col-md-6">
       <h1>{{ blog.title }}</h1>
     </div> 
   </div> 
     
   <!-- Begin content -->
   <div class="row">
-    <div class="span9 articles">
+    <div class="span4 articles">
       {% for article in blog.articles %}
       <div class="article">
         <h1>
@@ -35,7 +89,8 @@
     
   </div>
   <!-- End content -->
-  
+    </div>
+  </div>
 </div>
 
 {% include 'pagination' %}
