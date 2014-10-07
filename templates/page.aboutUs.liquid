@@ -1,0 +1,64 @@
+<div id="page" class="row">
+
+  <style>
+    /* centered columns styles */
+    .row-centered {
+        text-align:center;
+    }
+    .col-centered {
+        display:inline-block;
+        float:none;
+        /* reset the text-align */
+        text-align:left;
+        /* inline-block space fix */
+        margin-right:-4px;
+    }
+    .formItems input{
+      
+      border-radius:25px;
+      width:90%;
+    } 
+    .formItems textarea{
+      width: 90%;
+      border-radius:15px;
+    }
+    .formItems {
+      margin-left:5%;
+    }
+    @media (max-width: 900px) { 
+      #hide { 
+        display:none;
+      } 
+    }
+    
+    /*@media (max-width: 1095px) { 
+      #hide { 
+        
+        display:inline-block;
+        float:none;                     */
+        /* reset the text-align */
+      /*  text-align:left; */
+        /* inline-block space fix */
+        /*margin-right:-4px;
+        
+      } 
+    }*/
+  
+  </style>
+  
+  <div class="row row-centered" 
+       style="color:#fff;
+              background-image:url(https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/fullbgcontact.png);
+              background-size:cover;">
+  
+    <div class="col-md-6 col-centered" style="
+              background-image:url(https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/bgform.png); width:70%;
+              background-size:cover;">
+    <br>
+    <h1 style="color:#fff;" class="row-centered">{{ page.title }}</h1>
+    <h4 style="color:#fff;">{{ page.content }}</h4>
+    
+    </div>
+</div>
+  
+</div>
