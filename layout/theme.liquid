@@ -177,8 +177,11 @@
     <footer>
       <div class="row">
 
-        <div class="span12 full-border"></div>
-        
+        <!--FOOTER MAQUETADO-->
+          <h4 align="center"> |<a href="/pages/terms-of-use"> TERMS AND CONDITIONS </a>|<a href="/pages/privacy-statement"> PRIVACY STATEMENT </a>|<a href="/pages/contact-us"> CONTACT </a>|
+          </h4>
+         <!--FOOTER MAQUETADO-->
+
         {% assign blog_module_in_footer = false %}
         
         <!-- Begin latest blog post -->
@@ -207,6 +210,8 @@
         <!-- End footer navigation -->
         
         <!-- Begin newsletter/social -->
+                
+
         <div class="span4">
           
           {% if settings.footer_display_newsletter %}
@@ -231,6 +236,7 @@
         <!-- End newsletter/social -->
         
         {% unless blog_module_in_footer %}
+        <!--CODIGO SOCIAL MEDIA
         <div class="span4">          
           <div class="clearfix">
           {% if settings.enable_social_links %}
@@ -240,10 +246,13 @@
           </div>
           
         </div>
+         -->
         {% endunless %}
         
         <!-- Begin copyright -->
         <div class="span12 tc copyright">
+
+
           <p>Copyright &copy; {{ 'now' | date: "%Y" }} {{ shop.name }} | {{ powered_by_link }} {% if settings.designed_by %}{% endif %} </p>
           {% if shop.enabled_payment_types.size > 0 %}
           <ul class="credit-cards clearfix">
