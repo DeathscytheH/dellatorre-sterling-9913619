@@ -1,0 +1,73 @@
+
+  <style>
+    /* centered columns styles */
+    .row-centered {
+        text-align:center;
+    }
+    .col-centered {
+        display:inline-block;
+        float:none;
+        /* reset the text-align */
+        text-align:left;
+        /* inline-block space fix */
+        margin-right:-4px;
+    }
+    .formItems input{
+      
+      border-radius:25px;
+      width:90%;
+    } 
+    .formItems textarea{
+      width: 90%;
+      border-radius:15px;
+    }
+    .formItems {
+      margin-left:5%;
+    }
+    @media (max-width: 900px) { 
+      #hide { 
+        display:none;
+      } 
+    }
+    .title-StoreL{
+    	text-shadow:2px 2px #000;
+      	font-weight:bold;
+      	font-style:italic;
+      	font-size:28px;
+    }
+      
+  </style>
+  
+
+<div id="page" class="row">
+<!-- Fondo principal -->	
+  <div class="row row-centered" 
+       style="color:#fff;
+              background-image:url(https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/bgcollectionstore.png?2682);
+              background-size:cover;">
+  <!-- Fondo centrado -->
+    	<div class="col-md-6 col-centered" style="
+              background-image:url(https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/bgcenterCS.png?2698); width:70%;
+              background-size:cover;">
+          
+          
+          
+    		<br>
+          <div class="row">  
+          	<div class="span12">
+    			<h1 style="color:#fff;" class="title-StoreL">{{ page.title }}</h1>
+          	</div>
+          </div>
+          
+          <div class="row">  
+          	<div class="span12">
+              <h4 style="color:#fff;">{{ page.content }}</h4>
+            </div>
+          </div>
+    
+    
+    	</div>
+  <!-- Fin fondo centrado-->
+	</div>
+<!-- Fin fondo principal -->  
+</div>
