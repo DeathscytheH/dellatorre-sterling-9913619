@@ -25,12 +25,12 @@
    display: block;
    position: relative;
 }
-.view h5 {
+.view h6 {
    text-transform: uppercase;
    color: #fff;
    text-align: center;
    position: relative;
-   font-size: 17px;
+   font-size: 60%;
    padding: 10px;
    background: rgba(0, 0, 0, 0.8);
    margin: 20px 0 0 0;

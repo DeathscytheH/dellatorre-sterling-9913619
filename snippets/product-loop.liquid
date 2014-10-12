@@ -1,7 +1,8 @@
 {% capture collection_handle %}{{ product-loop | handleize }}{% endcapture %}
 {% capture url %}{% if collection_handle != "" %}/collections/{{ product-loop }}{{ product.url }}{% else %}{{ product.url }}{% endif %}{% endcapture %}
-<div class="product span2 {% if template == 'collection' %}adaptive-grid{% endif %}">
-  
+<!-- Aqui se mueve los productos en el span!!!-->
+<div class="product span3 {% if template == 'collection' %}adaptive-grid{% endif %}">
+
   {% if product.price_min < product.compare_at_price_min %}
     {% if settings.show_sale_circle %}
     <span class="circle sale">Sale</span>
@@ -10,10 +11,10 @@
 
     <div class="view view-first">
       <a href="{{ url }}" class="clearfix">
-        <img src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.title | escape  }}" />
+        <img class="img-responsive" src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.title | escape  }}" />
       
       <div class="mask">
-        <h5>{{ product.title }}</h5>
+        <h6>{{ product.title }}</h6>
         <p>
           {% if settings.product_vendor %}
             <span class="vendor">{{ product.vendor }}</span>
@@ -35,32 +36,6 @@
       </div>
       </a>
     </div>
-<!-- detalles
-  <div class="details">
-    <a href="{{ url }}" class="clearfix">
-      <h4 class="title">{{ product.title }}</h4>
-      {% if settings.product_vendor %}
-      <span class="vendor">{{ product.vendor }}</span>
-      {% endif %}
-      
-      <span class="price">
-      {% if product.available %}
-        {% if product.compare_at_price_max > product.price %}
-          <del>{{ product.compare_at_price | money }}</del>
-        {% endif %}
-        {% if product.price_varies %}
-        <small><em>from</em></small>
-        {% endif %}
-        {{ product.price | money }}
-      {% else %}
-        {{ product.price | money }} Sold Out
-      {% endif %}
-      </span>
-      
-    </a>
-  </div>
--->
-  
 </div>
 
 {% unless template contains 'collection' %}
