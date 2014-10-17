@@ -161,7 +161,7 @@
     "thumbnails_position": "below",
     "collection_tags": true,
     "collection_sort": true,
-    "pagination_limit": "12",
+    "pagination_limit": "9",
     "show_photo_border": true,
     "product_opacity_hover": "0.7",
     "show_sale_circle": true,
