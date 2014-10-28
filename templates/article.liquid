@@ -1,11 +1,65 @@
 {% paginate article.comments by 100 %}
 <div id="article" class="row">
+    <style>
+    /* centered columns styles */
+    .row-centered {
+        text-align:center;
+    }
+    .col-centered {
+        display:inline-block;
+        float:none;
+        /* reset the text-align */
+        text-align:left;
+        /* inline-block space fix */
+        margin-right:-4px;
+    }
+    .formItems input{
+      
+      border-radius:25px;
+      width:90%;
+    } 
+    .formItems textarea{
+      width: 90%;
+      border-radius:15px;
+    }
+    .formItems {
+      margin-left:5%;
+    }
+    @media (max-width: 900px) { 
+      #hide { 
+        display:none;
+      } 
+    }
+    
+    /*@media (max-width: 1095px) { 
+      #hide { 
+        
+        display:inline-block;
+        float:none;                     */
+        /* reset the text-align */
+      /*  text-align:left; */
+        /* inline-block space fix */
+        /*margin-right:-4px;
+        
+      } 
+    }*/
   
+  </style>
+  
+  <div class="row row-centered" 
+       style="color:#fff;
+              background-image:url(https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/bgBlog.jpg);
+              background-size:cover;">
+  
+    <div class="col-md-6 col-centered" style="
+              background-color:#ffffff; width:70%;
+              background-size:cover;">
   <div class="span9 article">
     
     <!-- Begin article -->
     <div class="article-body clearfix">
-      <h1>{{ article.title }} 
+      <h1>{{ article.title }}
+      <br> 
         <span class="date" style="display: block;">
         {{ article.published_at | date: "%B %d %Y" }}
         {% if article.comments_enabled? and article.comments_count > 0 %}
@@ -74,8 +128,9 @@
         <textarea id="comment_body" name="comment[body]" cols="40" rows="5" class="text">{{form.body}}</textarea>
 
         <input type="submit" value="Post comment" class="btn" id="comment-submit" />
-
+        <br>
         {% if blog.moderated? %}
+        <br>
         <div class="notice">Comments have to be approved before showing up</div>
         {% endif %}
 
@@ -87,9 +142,10 @@
     
   </div>
   
-  <!-- Begin sidebar -->
-  {% include 'blog-sidebar' %}
+  <!-- Begin sidebar 
+  {% include 'blog-sidebar' %}-->
   <!-- End sidebar -->
-  
+    </div>
+  </div>  
 </div>
 {% endpaginate %}
