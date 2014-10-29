@@ -29,6 +29,9 @@
         display:none;
       } 
     }
+    .view-first .mask {
+      background-color: rgba(236,215,225, 0.7);
+    }
     
     /*@media (max-width: 1095px) { 
       #hide { 
@@ -112,6 +115,8 @@
           <!-- End sort collection -->
       
       <!-- Begin collection description -->
+      <div class="col-centered" style="background-image:url(https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/bgColection1.jpg);
+              background-size:cover;">
       {% if collection.description != "" %}
         {{ collection.description }}
       {% endif %}
@@ -132,12 +137,15 @@
           {% include 'product-loop' with collection.handle %}
           {% endfor %}
         </div>
-        <div class="hide span3" >
+        <div class="hide span3">
           <img src="https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/collar.jpg" />
         </div>
       </div>
+    </div>
+    <br>
       {% include 'pagination' %}
-
+    <br>
+    <br>
       {% endpaginate %}
       <!-- End no products -->      
     </div>
