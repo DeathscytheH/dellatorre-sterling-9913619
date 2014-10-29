@@ -57,7 +57,7 @@
     background-attachment: fixed;
     background-position: center; ">
   
-        <div class="span6 col-centered" style="
+        <div class="span9 col-centered" style="
               background-image:url(https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/bgSp.jpg); width:70%;
               background-size:cover;">
           {% paginate collection.products by settings.pagination_limit %}
@@ -131,13 +131,10 @@
       </div>
       {% endif %}
       <div style="margin-top:20px;">
-        <div class="row products span8">
+        <div class="row products span9">
           {% for product in collection.products %}
           {% include 'product-loop' with collection.handle %}
           {% endfor %}
-        </div>
-        <div class="hide span3">
-          <img src="https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/collar.jpg" />
         </div>
       </div>
     </div>
