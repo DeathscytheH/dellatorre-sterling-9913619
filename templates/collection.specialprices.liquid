@@ -61,7 +61,7 @@
               background-image:url(https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/bgSp.jpg); width:70%;
               background-size:cover;">
           {% paginate collection.products by settings.pagination_limit %}
-          <!-- Begin breadcrumb -->
+          <!-- Begin breadcrumb 
           <div class="breadcrumb clearfix">
             <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">Home</span></a></span> 
             <span class="arrow-space">&#62;</span>
@@ -77,11 +77,14 @@
             {% if paginate.pages != 0 %}      
               <span class="arrow-space">&#62;</span> <strong>Page {{ paginate.current_page }} of {{ paginate.pages }}</strong>
             {% endif %}
-          </div>
+          </div>-->
           <!-- End breadcrumb -->
       
           <!-- Begin sort collection -->
           <div class="clearfix">
+            <br>
+            <br>
+            <br>
             <h1 class="row-centered" style="color:#fff">{{ collection.title }}</h1>
             {% if settings.collection_tags %}        
               {% if collection.all_tags.size > 0 %}
