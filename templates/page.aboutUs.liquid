@@ -25,25 +25,33 @@
     .formItems {
       margin-left:5%;
     }
+    .pad {
+      padding-top: -9px;
+      padding-bottom: -px;
+      margin-top: -9px;
+      margin-bottom: -8px;
+    }
     @media (max-width: 900px) { 
-      #hide { 
+      .hide { 
         display:none;
+      }
+      .full{
+        display: inline;
       } 
     }
   
   </style>
   
-  <div class="row row-centered" 
+  <div class="row row-centered pad" 
        style="color:#fff;
-              background-image:url(https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/bgAboutUs.png);
+              background-image:url(https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/bgfullAbout.jpg);
               background-size:cover;">
   
-    <div class="col-md-6 col-centered" style="
-              background-image:url(https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/bgAboutUs2.png); width:70%;
-              background-size:cover;">
+    <div class="col-md-6 col-centered full pad">
     <br>
-    <h1 style="color:#fff;" class="row-centered">{{ page.title }}</h1>
-    <h4 style="color:#fff;">{{ page.content }}</h4>
+    <img class="pad" src="https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/bgAbout.jpg" alt="">
+    <h1 style="color:#fff;" class="row-centered"></h1>
+    <h4 style="color:#fff;"></h4>
     
     </div>
 </div>
