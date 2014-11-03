@@ -177,11 +177,6 @@
     <footer>
       <div class="row">
 
-        <!--FOOTER MAQUETADO-->
-          <h4 align="center"> |<a href="/pages/terms-of-use"> TERMS AND CONDITIONS </a>|<a href="/pages/privacy-statement"> PRIVACY STATEMENT </a>|<a href="/pages/contact-us"> CONTACT </a>|
-          </h4>
-         <!--FOOTER MAQUETADO-->
-
         {% assign blog_module_in_footer = false %}
         
         <!-- Begin latest blog post -->
@@ -237,12 +232,21 @@
         
         {% unless blog_module_in_footer %}
         <!--CODIGO SOCIAL MEDIA-->
-        <div class="span4">          
+        <div class="span12">          
           <div class="clearfix">
+              <ul class="horizontal-inline clearfix">
+                <!--  <li>{{ '0.png' | asset_url | img_tag }}</li>-->
+                <li><a href="https://www.facebook.com/DellaTorrePlata">{{ 'rs-fb.png' | asset_url | img_tag }}</a></li>
+                <li><a href="https://twitter.com/dellatorreplata">{{ 'rs-tw.png' | asset_url | img_tag }}</a></li>
+                <li><a href="http://instagram.com/dellatorreplata">{{ 'rs-ig.png' | asset_url | img_tag }}</a></li>
+                <li><a href="http://www.pinterest.com/dellatorreplata/boards/">{{ 'rs-pint.png' | asset_url | img_tag }}</a></li>
+                <!--<li>{{ '5.png' | asset_url | img_tag }}</li>-->
+              </ul>
+          <!--CODIGO SOCIAL MEDIA
           {% if settings.enable_social_links %}
             <h4>{{ settings.footer_social_title }}</h4>
             {% include 'social-links' %}
-          {% endif %}
+          {% endif %}-->
           </div>
           
         </div>
@@ -263,6 +267,12 @@
           {% endif %}  
         </div>
         <!-- End copyright -->
+        <!--FOOTER MAQUETADO-->
+        <div class="span12 clearfix">
+          <h4 align="center"> |<a href="/pages/terms-of-use"> TERMS AND CONDITIONS </a>|<a href="/pages/privacy-statement"> PRIVACY STATEMENT </a>|<a href="/pages/contact-us"> CONTACT </a>|
+          </h4>
+        </div>          
+         <!--FOOTER MAQUETADO-->
 
       </div> 
     </footer>
