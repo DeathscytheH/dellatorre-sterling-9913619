@@ -1,6 +1,7 @@
 <div id="page" class="row">
   
   <style>
+  input{min-width: 100%;}
     /* centered columns styles */
     .row-centered {
         text-align:center;
@@ -51,13 +52,16 @@
               background-image:url(https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/bgfullContact.jpg);
               background-size:cover;">
   
-    <div class="col-md-6 col-centered" style="
-              background-image:url(https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/bgContact.jpg); width:70%;
-              background-size:cover;">
+    <div class="col-md-12 col-centered" style="
+              background-image:url(https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/bgContact.jpg?4007); width:70%; background-size: 100% 100%; background-color:#14a5c3; background-repeat: repeat-x;
+;">
     <br>
-    <h1 style="color:#fff;" class="row-centered">{{ page.title }}</h1>
-    <h4 style="color:#fff;" class="row-centered" >{{ page.content }}</h4>
-    <div class="col-md-6 col-centered" id="responsiveleft" 
+    <h1 style="color:#fff; padding-left:15px; padding-top:20px;">{{ page.title }}</h1>
+    <br>
+    <br>
+    <br>
+    <h4 style="color:#fff; font-size:20px" class="row-centered" >{{ page.content }}</h4>
+    <div class="col-md-12 col-centered" id="responsiveleft" 
          style="margin-top: 5%; width:auto; background-color:#;">
       
             
@@ -77,7 +81,7 @@
         </div>
         {% endif %}
 
-        <div id="contactFormWrapper" class="formItems">
+        <div id="contactFormWrapper" class="formItems" style="width:100%;">
           <p>
             <label>Name:</label><br/>
             <input type="text" id="contactFormName" name="contact[name]"/>

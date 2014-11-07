@@ -31,21 +31,7 @@
     }
     .view-first .mask {
       background-color: rgba(236,215,225, 0.7);
-    }
-    
-    /*@media (max-width: 1095px) { 
-      #hide { 
-        
-        display:inline-block;
-        float:none;           */
-        /* reset the text-align */
-      /*  text-align:left; */
-        /* inline-block space fix */
-        /*margin-right:-4px;
-        
-      } 
-    }*/
-  
+    }  
   </style>
 
   
@@ -82,10 +68,11 @@
       
           <!-- Begin sort collection -->
           <div class="clearfix">
-            <br>
-            <br>
             <br>            
-            <h1 class="row-centered" style="color:#fff">{{ collection.title }}</h1>
+            <h1 class="row-centered" style="color:#fff; padding-left:15px; padding-top:20px;">{{ collection.title }}</h1>
+            <br>
+            <br>
+            <!-- Begin tags of collection 
             {% if settings.collection_tags %}        
               {% if collection.all_tags.size > 0 %}
               <div class="browse-tags">
@@ -98,7 +85,7 @@
                 </select>        
               </div>
               {% endif %}        
-            {% endif %}
+            {% endif %}-->
             {% if settings.collection_sort and collection.products_count > 1 %}
               <div class="browse-tags">
                 <label>Sort by:</label>
@@ -111,7 +98,9 @@
                   <option value="created-ascending">Oldest to Newest</option>
                   <option value="created-descending">Newest to Oldest</option>
                   <option value="best-selling">Best Selling</option>
-                </select>           
+                </select>
+                <br>
+                <br>           
               </div>        
             {% endif %}
             <br>
@@ -142,7 +131,7 @@
           {% include 'product-loop' with collection.handle %}
           {% endfor %}
         </div>
-        <div class="hide span3">
+        <div class="hide span3" style="padding-top:140px;">
           <img src="https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/collar.jpg" />
         </div>
       </div>

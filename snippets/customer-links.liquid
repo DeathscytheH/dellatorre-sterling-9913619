@@ -4,13 +4,11 @@
   {% else %}
     <li class="customer-links">
       {{ 'Log in' | customer_login_link }}
-      <span class="or">or</span>
-      {{ 'Create an account' | customer_register_link }}
       {% if shop.customer_accounts_optional %}
       <span class="or">or</span>
       {{ 'Create an account' | customer_register_link }}
       {% endif %}
-      <span class="fr"> &nbsp;&nbsp;&nbsp;&nbsp;- VISTA RIDGE MALL #2304 LEWISVILLE, TEXAS 972-459-0201 - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span class="fr"> &nbsp;&nbsp;&nbsp;&nbsp;- VISTA RIDGE MALL #2304 LEWISVILLE, TEXAS&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-phone"></i>972-459-0201 - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
       <span class="fr"> &nbsp;&nbsp;&nbsp;&nbsp; ON LINE BOUTIQUE </span>      
     </li>
   {% endif %}
