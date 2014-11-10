@@ -1,4 +1,23 @@
-<ul class="horizontal-inline clearfix {% if settings.navigation_alignment == "left" %}fr{% endif %}">
+<style>
+  .malang{
+  float:right; position:relative; right:200px;
+  }
+  .navnavnav{
+    position:relative;
+    left:90px;
+  }
+  @media (max-width: 990px) {
+    .malang{ top:-10px;right:80px;}
+    .navnavnav{top:-30px; }
+  }
+  
+  @media (max-width: 810px) {
+    .malang{right:10px;}
+    .navnavnav{left:150px; }
+  }
+  
+</style>
+<ul class="horizontal-inline clearfix navnavnav {% if settings.navigation_alignment == "left" %}fr{% endif %}">
   {% for link in linklists.main-menu.links %}
   {% assign has_sub_menu = false %}
   {% assign has_sub_categories = false %}
@@ -18,9 +37,9 @@
   {% endif %}
   <li class="{% if has_sub_menu or has_sub_categories %} dropdown{% endif %}">
     <a href="{{ link.url }}" {% if link.active or parent_link_active %} class="current"{% endif %} >
-      {{ link.title }}
+      {{ link.title }} 
       {% if has_sub_menu or has_sub_categories %} <i class="fa fa-angle-down"></i>{% endif %}
-    </a> 
+    &nbsp;&nbsp;<vr></vr></a> 
     {% if has_sub_menu or has_sub_categories %}
     <ul class="dropdown">
       {% if has_sub_menu %}
@@ -40,4 +59,22 @@
     {% endif %}
   </li>
   {% endfor %}
+  
+  
+  <div class="malang" style=" ">
+    <div class="txtr" style="float:right; font-size: 2px; background-color:#; height:80px; width:50px;">
+     <a href="#"> 
+       <img width="31" src="https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/languageico.png?4140"/>
+     </a> 
+      <br><a href="#"><span style="font-size:12px; position:relative; top:-5px;">LANGUAGE</span></a>
+    </div>
+
+    <div class="txtr" style="float:right; background-color:#; height:80px; width:80px;">
+      <a href="#"> 
+        <img src="https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/macountico.png?4144"/>
+      </a>
+      <br><a href="#"><span style="font-size:12px;">MY ACCOUNT</span></a>
+    </div>
+  </div>
+  
 </ul>

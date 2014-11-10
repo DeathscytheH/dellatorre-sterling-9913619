@@ -59,7 +59,7 @@
 
 <body>
   <style>
-    .vr
+    vr
     {
       display:inline;
       height:100%;
@@ -68,38 +68,19 @@
       margin:5px
       background-color: black;
     }
-    
-    #Logo_PResponsiva{
-    	display:none;
+	#Logo_PCompleta{ 
+      	position:relative;
+      	left:220px;
     }
-    @media (max-width: 770px) { 
-      #Logo_PResponsiva {
-        position:relative;
-      	display:block;
-      }
-      #Logo_PCompleta{ 
-      	display:none;
-      }
-    }
+    @media (max-width: 990px) {
+    	#Logo_PCompleta{ 
+          left:0px;
+        }
+  	}
   </style>
   
   <!-- Begin toolbar -->
 
-    <div id = "Logo_PResponsiva" class="">
-              <div class="logo">
-                {% if settings.use_logo %}
-                <a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
-                {% if template == 'index' %}
-                <h1 style="display:none"><a href="/">{{ shop.name }}</a></h1>
-                {% endif %}
-                {% else %}              
-                <h1><a href="/">{{ shop.name }}</a></h1>
-                {% endif %}
-              </div>
-
-    </div>
-
-  
   <div class="toolbar-wrapper">
     <div class="toolbar clearfix">
         <ul class="unstyled">
@@ -140,7 +121,8 @@
       <!-- Begin right navigation -->
       {% if settings.navigation_alignment == "right" %}
       <div class="row  combo" id="header">
-        <div class="span12" style="margin-bottom:-65px">
+        <!--<div class="span12" style="margin-bottom:-65px">-->
+        <div class="span12" style="margin-bottom:-85px">
           <div id = "Logo_PCompleta" class="span3 logo-wrapper">
             <div class="logo">
               {% if settings.use_logo %}
@@ -159,8 +141,8 @@
           <div class="span9" style="margin:0px; 
                                     padding:0px;  
                                     display:inline-block; 
-                                    float:right; margin-top:-60px; 
-                                    margin-left:-20px;">
+                                    float:right; margin-top:-80px; 
+                                    margin-left:-20px; margin-right:200px">
               <nav class="main">
                 {% include 'site-nav' %}
               </nav> 
@@ -314,7 +296,7 @@
         <!-- End copyright -->
         <!--FOOTER MAQUETADO-->
         <div class="span12 clearfix">
-          <h4 align="center"> |<a href="/pages/terms-of-use"> TERMS AND CONDITIONS </a>|<a href="/pages/privacy-statement"> PRIVACY STATEMENT </a>|<a href="/pages/contact-us"> CONTACT </a>| <a href="/pages/about-us"> ABOUT US </a> | <a href="/collections/collection"> COLLECTIONS </a> | <a href="/pages/store"> STORE </a>
+          <h4 align="center"><a href="/pages/terms-of-use"> TERMS AND CONDITIONS </a>|<a href="/pages/privacy-statement"> PRIVACY STATEMENT </a>|<a href="/pages/contact-us"> CONTACT </a>| <a href="/pages/about-us"> ABOUT US </a> | <a href="/collections/collection"> COLLECTIONS </a> | <a href="/pages/store"> STORE </a>
           </h4>
         </div>          
          <!--FOOTER MAQUETADO-->
