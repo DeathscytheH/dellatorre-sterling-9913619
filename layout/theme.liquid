@@ -82,6 +82,11 @@
           left:0px;
         }
   	}
+    @media (max-width: 810px) {
+    	#Logo_PCompleta{ 
+          left:250px;
+        }
+  	}
     @media (max-width: 780px) {
     	#Logo_PCompleta{ 
           left:60px;
@@ -143,26 +148,29 @@
       <div class="row  combo" id="header">
         <!--<div class="span12" style="margin-bottom:-65px">-->
         <div class="span12" style="margin-bottom:-85px">
-          <div id = "Logo_PCompleta" class="span3 logo-wrapper">
+          <a href="/index.html" target="_self">
+            <div style="" id ="Logo_PCompleta" class="span3 logo-wrapper">
             <div class="logo">
               {% if settings.use_logo %}
-              <a href="#"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
+              <a href="/index.html" target="_self"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
               {% if template == 'index' %}
-              <h1 style="display:none"><a href="/">{{ shop.name }}</a></h1>
+              <h1 style="display:none"><a href="/index.html">{{ shop.name }}</a></h1>
               {% endif %}
               {% else %}              
-              <h1><a href="/">{{ shop.name }}</a></h1>
+              <a href="/index.html"><h1>{{ shop.name }}</h1></a>
               {% endif %}
             </div>
             <div class="space">              
             </div>
           </div>
+        </a>
           <section id="nav" class="row">
-          <div class="span9" style="margin:0px; 
-                                    padding:0px;  
+          <div class="span9" style="
+                                    background-color:#;
+                                    width:auto;
                                     display:inline-block; 
-                                    float:right; margin-top:-80px; 
-                                    margin-left:-20px; margin-right:200px">
+                                    margin-left:100px;margin-top:20px; 
+                                    ">
               <nav class="main">
                 {% include 'site-nav' %}
               </nav> 
@@ -186,12 +194,12 @@
       <div class="span4 clearfix">
         <div class="logo">
           {% if settings.use_logo %}
-          <a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
+          <a href="/index.html"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
           {% if template == 'index' %}
-          <h1 style="display:none"><a href="/">{{ shop.name }}</a></h1>
+          <h1 style="display:none"><a href="/index.html">{{ shop.name }}</a></h1>
           {% endif %}
           {% else %}
-          <h1><a href="/">{{ shop.name }}</a></h1>
+          <h1><a href="/index.html">{{ shop.name }}</a></h1>
           {% endif %}
         </div> 
       </div> 
