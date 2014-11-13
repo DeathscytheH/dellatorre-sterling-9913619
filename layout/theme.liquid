@@ -54,7 +54,6 @@
   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.3.7/slick.min.js"></script>
   {{ 'style_common.css' | asset_url | stylesheet_tag }}
   {{ 'style1.css' | asset_url | stylesheet_tag }}
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -105,7 +104,7 @@
   </style>
   
   <!-- Begin toolbar -->
-
+  
   <div class="toolbar-wrapper">
     <div class="toolbar clearfix">
         <ul class="unstyled">
@@ -146,24 +145,21 @@
       <!-- Begin right navigation -->
       {% if settings.navigation_alignment == "right" %}
       <div class="row  combo" id="header">
-        <!--<div class="span12" style="margin-bottom:-65px">-->
-        <div class="span12" style="margin-bottom:-85px">
-          <a href="/index.html" target="_self">
-            <div style="" id ="Logo_PCompleta" class="span3 logo-wrapper">
+        <div class="span12" style="margin-bottom:-65px">
+          <div id = "Logo_PCompleta" class="span3 logo-wrapper">
             <div class="logo">
               {% if settings.use_logo %}
-              <a href="/index.html" target="_self"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
+              <a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
               {% if template == 'index' %}
-              <h1 style="display:none"><a href="/index.html">{{ shop.name }}</a></h1>
+              <h1 style="display:none"><a href="/">{{ shop.name }}</a></h1>
               {% endif %}
               {% else %}              
-              <a href="/index.html"><h1>{{ shop.name }}</h1></a>
+              <h1><a href="/">{{ shop.name }}</a></h1>
               {% endif %}
             </div>
             <div class="space">              
             </div>
           </div>
-        </a>
           <section id="nav" class="row">
           <div class="span9" style="
                                     background-color:#;
@@ -194,12 +190,12 @@
       <div class="span4 clearfix">
         <div class="logo">
           {% if settings.use_logo %}
-          <a href="/index.html"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
+          <a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
           {% if template == 'index' %}
-          <h1 style="display:none"><a href="/index.html">{{ shop.name }}</a></h1>
+          <h1 style="display:none"><a href="/">{{ shop.name }}</a></h1>
           {% endif %}
           {% else %}
-          <h1><a href="/index.html">{{ shop.name }}</a></h1>
+          <h1><a href="/">{{ shop.name }}</a></h1>
           {% endif %}
         </div> 
       </div> 
@@ -324,7 +320,7 @@
         <!-- End copyright -->
         <!--FOOTER MAQUETADO-->
         <div class="span12 clearfix">
-          <h4 align="center"><a href="/pages/terms-of-use"> TERMS AND CONDITIONS </a>|<a href="/pages/privacy-statement"> PRIVACY STATEMENT </a>|<a href="/pages/contact-us"> CONTACT </a>| <a href="/pages/about-us"> ABOUT US </a> | <a href="/collections/collection"> COLLECTIONS </a> | <a href="/pages/store"> STORE </a>
+          <h4 align="center"> |<a href="/pages/terms-of-use"> TERMS AND CONDITIONS </a>|<a href="/pages/privacy-statement"> PRIVACY STATEMENT </a>|<a href="/pages/contact-us"> CONTACT </a>| <a href="/pages/about-us"> ABOUT US </a> | <a href="/collections/collection"> COLLECTIONS </a> | <a href="/pages/store"> STORE </a>
           </h4>
         </div>          
          <!--FOOTER MAQUETADO-->
