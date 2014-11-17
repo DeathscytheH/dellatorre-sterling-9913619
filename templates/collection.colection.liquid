@@ -113,7 +113,7 @@
       
       <!-- Begin collection description -->
       <div class="col-centered" style="background-image:url(https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/bgColection1.jpg);
-              background-size:cover;">
+              background-size:cover; margin-right:1px;">
       {% if collection.description != "" %}
         {{ collection.description }}
       {% endif %}
@@ -129,14 +129,15 @@
       </div>
       {% endif %}
       <div style="margin-top:20px;">
-        <div class="row products span8">
+        <div class="row products span12">
           {% for product in collection.products %}
           {% include 'product-loop' with collection.handle %}
           {% endfor %}
         </div>
-        <div class="hide span3" style="padding-top:10px;">
+        <!-- 
+        <div class="hide span3" style="padding-top:10px; padding-bottom:30px;">
           <img src="https://cdn.shopify.com/s/files/1/0605/4057/t/2/assets/collar.jpg" />
-        </div>
+        </div>-->
       </div>
     </div>
     <br>
