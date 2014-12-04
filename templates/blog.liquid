@@ -71,7 +71,6 @@
       <div class="article">
         <h1 style="font-family:Helvetica;">
           <a href="{{ article.url }}">{{ article.title }}</a>
-          <br> 
           <span class="date" style="display: block;">
             {{ article.published_at | date: "%B %d %Y" }}
             {% if article.comments_enabled? and article.comments_count > 0 %}
